@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
+  <process:MainProcess xmi:id="_PH_rcEU9EeuYOOr8JiHqIQ" name="SSPM" author="jcalarcon" bonitaVersion="7.11.4" bonitaModelVersion="7.11.1-001" configId="ACED0005740010372E31312E312D303031372E31312E34">
+    <elements xmi:type="process:Pool" xmi:id="_PH_rcUU9EeuYOOr8JiHqIQ" name="Seguimiento al sílabo y Plan de mejoras">
+      <elements xmi:type="process:Lane" xmi:id="_PH_rckU9EeuYOOr8JiHqIQ" name="Dirección de Carrera" actor="_PH_ri0U9EeuYOOr8JiHqIQ">
+        <elements xmi:type="process:StartEvent" xmi:id="_PH_rc0U9EeuYOOr8JiHqIQ" name="Inicio del Proceso" outgoing="_PH_riEU9EeuYOOr8JiHqIQ">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_PH_rdEU9EeuYOOr8JiHqIQ" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_PH_rdUU9EeuYOOr8JiHqIQ" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_PH_rdkU9EeuYOOr8JiHqIQ" name="" content="" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:Task" xmi:id="_PH_rd0U9EeuYOOr8JiHqIQ" name="Suministrar información necesaria para el proceso" incoming="_PH_riEU9EeuYOOr8JiHqIQ" overrideActorsOfTheLane="false">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_PH_reEU9EeuYOOr8JiHqIQ" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_PH_reUU9EeuYOOr8JiHqIQ" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_PH_rekU9EeuYOOr8JiHqIQ" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_R5e6oEVIEeuYOOr8JiHqIQ">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_R5e6oUVIEeuYOOr8JiHqIQ" name="tracking" content="tracking" type="TYPE_VARIABLE" returnType="com.company.model.Tracking">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_R5e6okVIEeuYOOr8JiHqIQ" name="tracking" dataType="_PH_rpEU9EeuYOOr8JiHqIQ" className="com.company.model.Tracking"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_R5e6o0VIEeuYOOr8JiHqIQ" name="trackingInput.manager" content="trackingInput?.manager" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Hf98kEVdEeuYOOr8JiHqIQ" name="trackingInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_R5e6pUVIEeuYOOr8JiHqIQ" type="JAVA_METHOD" expression="setManager">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_R5e6pkVIEeuYOOr8JiHqIQ">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_R5e6p0VIEeuYOOr8JiHqIQ" name="tracking" content="tracking" type="TYPE_VARIABLE" returnType="com.company.model.Tracking">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_R5e6qEVIEeuYOOr8JiHqIQ" name="tracking" dataType="_PH_rpEU9EeuYOOr8JiHqIQ" className="com.company.model.Tracking"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_R5e6qUVIEeuYOOr8JiHqIQ" name="trackingInput.periodStart" content="trackingInput?.periodStart" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDate">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_R5e6qkVIEeuYOOr8JiHqIQ" name="trackingInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_R5e6q0VIEeuYOOr8JiHqIQ" type="JAVA_METHOD" expression="setPeriodStart">
+              <inputTypes>java.time.LocalDate</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_R5e6rEVIEeuYOOr8JiHqIQ">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_R5e6rUVIEeuYOOr8JiHqIQ" name="tracking" content="tracking" type="TYPE_VARIABLE" returnType="com.company.model.Tracking">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_R5e6rkVIEeuYOOr8JiHqIQ" name="tracking" dataType="_PH_rpEU9EeuYOOr8JiHqIQ" className="com.company.model.Tracking"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_R5e6r0VIEeuYOOr8JiHqIQ" name="trackingInput.periodEnd" content="trackingInput?.periodEnd" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDate">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_jLDZAEVcEeuYOOr8JiHqIQ" name="trackingInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_R5e6sUVIEeuYOOr8JiHqIQ" type="JAVA_METHOD" expression="setPeriodEnd">
+              <inputTypes>java.time.LocalDate</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_UMna5EVIEeuYOOr8JiHqIQ">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_UMna5UVIEeuYOOr8JiHqIQ" name="teacher" content="teacher" type="TYPE_VARIABLE" returnType="java.util.List">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_UMna5kVIEeuYOOr8JiHqIQ" name="teacher" multiple="true" dataType="_PH_rpEU9EeuYOOr8JiHqIQ" className="com.company.model.Teacher"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_UMna50VIEeuYOOr8JiHqIQ" name="teacherInput" content="def teacherList = []&#xA;//For each item collected in multiple input&#xA;teacherInput.each{&#xA;&#x9;//Add Teacher instance&#xA;&#x9;teacherList.add({ currentTeacherInput ->&#xA;&#x9;&#x9;def teacherVar = teacher.find { it.persistenceId.toString() == currentTeacherInput.persistenceId_string} ?: new com.company.model.Teacher()&#xA;&#x9;&#x9;teacherVar.name = currentTeacherInput.name&#xA;&#x9;&#x9;teacherVar.email = currentTeacherInput.email&#xA;&#x9;&#x9;return teacherVar&#xA;&#x9;}(it))&#xA;}&#xA;return teacherList" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_WzR18EVaEeuYOOr8JiHqIQ" name="teacher" multiple="true" dataType="_PH_rpEU9EeuYOOr8JiHqIQ" className="com.company.model.Teacher"/>
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_WzR18UVaEeuYOOr8JiHqIQ" name="teacherInput" type="COMPLEX" multiple="true" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_UMna6kVIEeuYOOr8JiHqIQ" type="ASSIGNMENT" expression="addAll">
+              <inputTypes>java.util.Collection</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_M5de4EVfEeuYOOr8JiHqIQ">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_M5de4UVfEeuYOOr8JiHqIQ" name="tracking" content="tracking" type="TYPE_VARIABLE" returnType="com.company.model.Tracking">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_NcZM0EVfEeuYOOr8JiHqIQ" name="tracking" dataType="_PH_rpEU9EeuYOOr8JiHqIQ" className="com.company.model.Tracking"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_M5de4kVfEeuYOOr8JiHqIQ" name="teacher" content="teacher" type="TYPE_VARIABLE" returnType="java.util.List">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_TdGyEEVfEeuYOOr8JiHqIQ" name="teacher" multiple="true" dataType="_PH_rpEU9EeuYOOr8JiHqIQ" className="com.company.model.Teacher"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_M5de40VfEeuYOOr8JiHqIQ" type="JAVA_METHOD" expression="setCommission">
+              <inputTypes>java.util.List</inputTypes>
+            </operator>
+          </operations>
+          <loopCondition xmi:type="expression:Expression" xmi:id="_PH_re0U9EeuYOOr8JiHqIQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <loopMaximum xmi:type="expression:Expression" xmi:id="_PH_rfEU9EeuYOOr8JiHqIQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <cardinalityExpression xmi:type="expression:Expression" xmi:id="_PH_rfUU9EeuYOOr8JiHqIQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <iteratorExpression xmi:type="expression:Expression" xmi:id="_PH_rfkU9EeuYOOr8JiHqIQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
+          <completionCondition xmi:type="expression:Expression" xmi:id="_PH_rf0U9EeuYOOr8JiHqIQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <formMapping xmi:type="process:FormMapping" xmi:id="_PH_rgEU9EeuYOOr8JiHqIQ">
+            <targetForm xmi:type="expression:Expression" xmi:id="_bZ94kEecEeu3tN8d6k__qg" name="02configuracionDireccionForm" content="efbea9c3-9f93-4b78-b948-39bbabb805e0" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+          </formMapping>
+          <contract xmi:type="process:Contract" xmi:id="_PH_rgkU9EeuYOOr8JiHqIQ">
+            <inputs xmi:type="process:ContractInput" xmi:id="_R5eTkEVIEeuYOOr8JiHqIQ" name="trackingInput" type="COMPLEX" dataReference="tracking" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_R5eTkUVIEeuYOOr8JiHqIQ" name="manager" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_R5eTkkVIEeuYOOr8JiHqIQ" name="periodStart" type="LOCALDATE" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_R5eTk0VIEeuYOOr8JiHqIQ" name="periodEnd" type="LOCALDATE" createMode="false"/>
+            </inputs>
+            <inputs xmi:type="process:ContractInput" xmi:id="_UMna4EVIEeuYOOr8JiHqIQ" name="teacherInput" type="COMPLEX" multiple="true" dataReference="teacher" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_UMna4UVIEeuYOOr8JiHqIQ" name="persistenceId_string" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_UMna4kVIEeuYOOr8JiHqIQ" name="name" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_UMna40VIEeuYOOr8JiHqIQ" name="email" createMode="false"/>
+            </inputs>
+            <inputs xmi:type="process:ContractInput" xmi:id="_BCJkwEWCEeuYOOr8JiHqIQ" name="sillabusFile" type="FILE">
+              <mapping xmi:type="process:ContractInputMapping" xmi:id="_BCJkwUWCEeuYOOr8JiHqIQ"/>
+            </inputs>
+            <inputs xmi:type="process:ContractInput" xmi:id="_I9HiwEecEeu3tN8d6k__qg" name="studentsFile" type="FILE">
+              <mapping xmi:type="process:ContractInputMapping" xmi:id="_I9HiwUecEeu3tN8d6k__qg"/>
+            </inputs>
+          </contract>
+          <expectedDuration xmi:type="expression:Expression" xmi:id="_PH_rg0U9EeuYOOr8JiHqIQ" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
+        </elements>
+      </elements>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_cuzfYEU9EeuYOOr8JiHqIQ" name="tracking" dataType="_PH_rpEU9EeuYOOr8JiHqIQ" className="com.company.model.Tracking">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_glxJ4UU9EeuYOOr8JiHqIQ" name="initTracking()" content="def trackingVar = new com.company.model.Tracking()&#xA;trackingVar.degree = trackingInput?.degree&#xA;return trackingVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.Tracking">
+          <referencedElements xmi:type="process:ContractInput" xmi:id="_glxJ4kU9EeuYOOr8JiHqIQ" name="trackingInput" type="COMPLEX"/>
+        </defaultValue>
+      </data>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_QFT9YEU_EeuYOOr8JiHqIQ" name="teacher" multiple="true" dataType="_PH_rpEU9EeuYOOr8JiHqIQ" className="com.company.model.Teacher">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_QFT9YUU_EeuYOOr8JiHqIQ" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
+      </data>
+      <formMapping xmi:type="process:FormMapping" xmi:id="_PH_rhEU9EeuYOOr8JiHqIQ">
+        <targetForm xmi:type="expression:Expression" xmi:id="_1k52QEU9EeuYOOr8JiHqIQ" name="01inicioProcesoForm" content="10b77ebd-b536-45da-8c9f-b60cda4fc70a" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+      </formMapping>
+      <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_PH_rhkU9EeuYOOr8JiHqIQ">
+        <targetForm xmi:type="expression:Expression" xmi:id="_PH_rh0U9EeuYOOr8JiHqIQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+      </overviewFormMapping>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_PH_riEU9EeuYOOr8JiHqIQ" target="_PH_rd0U9EeuYOOr8JiHqIQ" source="_PH_rc0U9EeuYOOr8JiHqIQ">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_PH_riUU9EeuYOOr8JiHqIQ"/>
+        <condition xmi:type="expression:Expression" xmi:id="_PH_rikU9EeuYOOr8JiHqIQ" name="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <actors xmi:type="process:Actor" xmi:id="_PH_ri0U9EeuYOOr8JiHqIQ" documentation="This is an example of actor that is mapped to any ACME users" name="Employee actor" initiator="true"/>
+      <contract xmi:type="process:Contract" xmi:id="_PH_rjEU9EeuYOOr8JiHqIQ">
+        <inputs xmi:type="process:ContractInput" xmi:id="_glwi0EU9EeuYOOr8JiHqIQ" name="trackingInput" type="COMPLEX" dataReference="tracking">
+          <inputs xmi:type="process:ContractInput" xmi:id="_glwi0UU9EeuYOOr8JiHqIQ" name="degree"/>
+        </inputs>
+        <constraints xmi:type="process:ContractConstraint" xmi:id="_glxJ4EU9EeuYOOr8JiHqIQ" expression="trackingInput?.degree != null" errorMessage="degree is mandatory for Tracking" name="mandatory_trackingInput_degree">
+          <inputNames>trackingInput</inputNames>
+        </constraints>
+      </contract>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_PH_rjUU9EeuYOOr8JiHqIQ">
+        <name xmi:type="expression:Expression" xmi:id="_PH_rjkU9EeuYOOr8JiHqIQ" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_PH_rj0U9EeuYOOr8JiHqIQ" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_PH_rkEU9EeuYOOr8JiHqIQ">
+        <name xmi:type="expression:Expression" xmi:id="_PH_rkUU9EeuYOOr8JiHqIQ" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_PH_rkkU9EeuYOOr8JiHqIQ" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_PH_rk0U9EeuYOOr8JiHqIQ">
+        <name xmi:type="expression:Expression" xmi:id="_PH_rlEU9EeuYOOr8JiHqIQ" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_PH_rlUU9EeuYOOr8JiHqIQ" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_PH_rlkU9EeuYOOr8JiHqIQ">
+        <name xmi:type="expression:Expression" xmi:id="_PH_rl0U9EeuYOOr8JiHqIQ" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_PH_rmEU9EeuYOOr8JiHqIQ" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_PH_rmUU9EeuYOOr8JiHqIQ">
+        <name xmi:type="expression:Expression" xmi:id="_PH_rmkU9EeuYOOr8JiHqIQ" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_PH_rm0U9EeuYOOr8JiHqIQ" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+    </elements>
+    <datatypes xmi:type="process:BooleanType" xmi:id="_PH_rnEU9EeuYOOr8JiHqIQ" name="Boolean"/>
+    <datatypes xmi:type="process:DateType" xmi:id="_PH_rnUU9EeuYOOr8JiHqIQ" name="Date"/>
+    <datatypes xmi:type="process:IntegerType" xmi:id="_PH_rnkU9EeuYOOr8JiHqIQ" name="Integer"/>
+    <datatypes xmi:type="process:LongType" xmi:id="_PH_rn0U9EeuYOOr8JiHqIQ" name="Long"/>
+    <datatypes xmi:type="process:DoubleType" xmi:id="_PH_roEU9EeuYOOr8JiHqIQ" name="Double"/>
+    <datatypes xmi:type="process:StringType" xmi:id="_PH_roUU9EeuYOOr8JiHqIQ" name="Text"/>
+    <datatypes xmi:type="process:JavaType" xmi:id="_PH_rokU9EeuYOOr8JiHqIQ" name="Java_object"/>
+    <datatypes xmi:type="process:XMLType" xmi:id="_PH_ro0U9EeuYOOr8JiHqIQ" name="XML"/>
+    <datatypes xmi:type="process:BusinessObjectType" xmi:id="_PH_rpEU9EeuYOOr8JiHqIQ" name="Business_Object"/>
+  </process:MainProcess>
+  <notation:Diagram xmi:id="_PH_rpUU9EeuYOOr8JiHqIQ" type="Process" element="_PH_rcEU9EeuYOOr8JiHqIQ" name="MyDiagram" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_PIASgEU9EeuYOOr8JiHqIQ" type="2007" element="_PH_rcUU9EeuYOOr8JiHqIQ">
+      <children xmi:type="notation:DecorationNode" xmi:id="_PIASgUU9EeuYOOr8JiHqIQ" type="5008"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_PIASgkU9EeuYOOr8JiHqIQ" type="7001">
+        <children xmi:type="notation:Node" xmi:id="_PIASg0U9EeuYOOr8JiHqIQ" type="3007" element="_PH_rckU9EeuYOOr8JiHqIQ">
+          <children xmi:type="notation:DecorationNode" xmi:id="_PIAShEU9EeuYOOr8JiHqIQ" type="5007"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_PIAShUU9EeuYOOr8JiHqIQ" type="7002">
+            <children xmi:type="notation:Shape" xmi:id="_PIAShkU9EeuYOOr8JiHqIQ" type="3005" element="_PH_rd0U9EeuYOOr8JiHqIQ" fontName="Fira Sans" fillColor="14334392" lineColor="10710316">
+              <children xmi:type="notation:DecorationNode" xmi:id="_PIASh0U9EeuYOOr8JiHqIQ" type="5005"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PIASiEU9EeuYOOr8JiHqIQ" x="174" y="93" width="140" height="70"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_PIASiUU9EeuYOOr8JiHqIQ" type="3002" element="_PH_rc0U9EeuYOOr8JiHqIQ" fontName="Fira Sans">
+              <children xmi:type="notation:DecorationNode" xmi:id="_PIASikU9EeuYOOr8JiHqIQ" type="5024">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_PIASi0U9EeuYOOr8JiHqIQ" y="5"/>
+              </children>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PIASjEU9EeuYOOr8JiHqIQ" x="60" y="103"/>
+            </children>
+          </children>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_PIASjUU9EeuYOOr8JiHqIQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_PIASjkU9EeuYOOr8JiHqIQ" fontName="Fira Sans"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_PIASj0U9EeuYOOr8JiHqIQ"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_PIASkEU9EeuYOOr8JiHqIQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PIASkUU9EeuYOOr8JiHqIQ" x="49" y="10" width="1249" height="237"/>
+        </children>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_PIASkkU9EeuYOOr8JiHqIQ"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_PIASk0U9EeuYOOr8JiHqIQ" fontName="Fira Sans"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_PIASlEU9EeuYOOr8JiHqIQ"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_PIASlUU9EeuYOOr8JiHqIQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PIASlkU9EeuYOOr8JiHqIQ" width="1273" height="250"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_PIASl0U9EeuYOOr8JiHqIQ"/>
+    <edges xmi:type="notation:Connector" xmi:id="_PIASmEU9EeuYOOr8JiHqIQ" type="4001" element="_PH_riEU9EeuYOOr8JiHqIQ" source="_PIASiUU9EeuYOOr8JiHqIQ" target="_PIAShkU9EeuYOOr8JiHqIQ" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_PIASmUU9EeuYOOr8JiHqIQ" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_PIASmkU9EeuYOOr8JiHqIQ" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_PIASm0U9EeuYOOr8JiHqIQ" fontName="Fira Sans"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_PIASnEU9EeuYOOr8JiHqIQ" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+    </edges>
+  </notation:Diagram>
+</xmi:XMI>

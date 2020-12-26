@@ -1,0 +1,43 @@
+{
+  "designerVersion" : "1.11.62",
+  "id" : "customAlertDanger",
+  "name" : "alertDanger",
+  "lastUpdate" : 1608940095308,
+  "template" : "@customAlertDanger.tpl.html",
+  "controller" : "@customAlertDanger.ctrl.js",
+  "custom" : true,
+  "properties" : [
+    {
+      "label" : "Message",
+      "name" : "message",
+      "help" : "Alert Message",
+      "type" : "text",
+      "defaultValue" : "Error",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Show the alert?",
+      "name" : "show",
+      "type" : "boolean",
+      "defaultValue" : true,
+      "bond" : "expression"
+    },
+    {
+      "label" : "Alert Type",
+      "name" : "type",
+      "type" : "choice",
+      "defaultValue" : "success",
+      "choiceValues" : [
+        "success",
+        "info",
+        "warning",
+        "danger"
+      ],
+      "bond" : "expression"
+    }
+  ],
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

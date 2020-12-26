@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0" productVersion="7.11.4">
+    <businessObjects>
+        <businessObject qualifiedName="com.company.model.Teacher">
+            <fields>
+                <field type="STRING" length="255" name="name" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="email" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Tracking">
+            <description>Object that will contain the necessary information for the execution of the Process</description>
+            <fields>
+                <field type="STRING" length="255" name="degree" nullable="false" collection="false">
+                    <description>Degree name to which the process will be applied.</description>
+                </field>
+                <field type="STRING" length="255" name="manager" nullable="true" collection="false">
+                    <description>Degree manager in the period in which the process is to be applied</description>
+                </field>
+                <field type="LOCALDATE" length="255" name="periodStart" nullable="true" collection="false">
+                    <description>Period start date.</description>
+                </field>
+                <field type="LOCALDATE" length="255" name="periodEnd" nullable="true" collection="false">
+                    <description>Period start end.</description>
+                </field>
+                <relationField type="AGGREGATION" reference="com.company.model.Teacher" fetchType="LAZY" name="commission" nullable="true" collection="true">
+                    <description>List of teachers assigned to the commission.</description>
+                </relationField>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+    </businessObjects>
+</businessObjectModel>
